@@ -5,4 +5,4 @@ read -e comment
 
 git add .
 git commit --author 'ceilingrat <>' -m "$comment"
-git push -u origin main
+# git push -u origin main
