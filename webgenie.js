@@ -38,23 +38,22 @@
   },
   /* functions with no side-effects */
   fn : {
-      ReduceObjContructorArrayItem ( pAcc, pVal ) {
-          if ( "fn" in pVal && 
-                "prototype" in pVal ) {
-              var fnX = pVal.fn;
-              for ( var y in pVal.prototype ) {
-                  fnX.prototype[y] = pVal.prototype[y];
-              }
-              pAcc[fnX.name] = fnX;                
-          }
-          return pAcc;
-      }
-      /* 
-          foo : function ( pStrBar ) { 
-              var bar = pStrBar; 
-              return bar; 
-          } 
-      */
+    ReduceObjContructorArrayItem ( pAcc, pVal ) {
+        if ( "fn" in pVal && 
+              "prototype" in pVal ) {
+            var fnX = pVal.fn;
+            for ( var y in pVal.prototype ) {
+                fnX.prototype[y] = pVal.prototype[y];
+            }
+            pAcc[fnX.name] = fnX;                
+        }
+        return pAcc;
+    },
+    SrcToScriptElm : function ( pStrSrc ) {
+      var oScript = document.createElement("script");
+      oScript.setAttribute("src", pStrSrc);
+      return oScript;           
+    }
   },
   /* object constructors */
   o : [
