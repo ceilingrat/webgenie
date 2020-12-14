@@ -11,7 +11,7 @@
 < link to notion site >
 
 ## Contents of this repo
-You'll only need this info if you plan on hacking on Web Genie.
+You'll only need this info if you plan on hacking on Web Genie.     
 If you just want to **use** Web Genie, see the resources above.
 
 | file name | description |
