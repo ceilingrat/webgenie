@@ -33,8 +33,8 @@
       },
       prototype : {
         insertScript : function () {
-          var bConfirm = this.getConfirm(), sSrcFull, oScript;
-          if ( bConfirm ) sSrcFull = prompt( "Confirm script URL\nIf necessary, edit URL text below", this.getSrcFull() );
+          var bConfirm = this.getConfirm(), sSrcFull = this.getSrcFull(), oScript;
+          if ( bConfirm ) sSrcFull = prompt( "Confirm script URL\nIf necessary, edit URL text below", sSrcFull );
           if ( !sSrcFull ) return;
           oScript = document.createElement("script");
           oScript.setAttribute("src", sSrcFull);           
