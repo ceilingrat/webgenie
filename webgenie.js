@@ -29,49 +29,49 @@
 }).run();
 
 ({
-    /* static data and initial input */
-    data : {
-        /* 
-            foo : "value", 
-            bar : "value" 
-        */
-    },
-    /* functions with no side-effects */
-    fn : {
-        ReduceObjContructorArrayItem ( pAcc, pVal ) {
-            if ( "fn" in pVal && 
-                 "prototype" in pVal ) {
-                var fnX = pVal.fn;
-                for ( var y in pVal.prototype ) {
-                    fnX.prototype[y] = pVal.prototype[y];
-                }
-                pAcc[fnX.name] = fnX;                
-            }
-            return pAcc;
-        }
-        /* 
-            foo : function ( pStrBar ) { 
-                var bar = pStrBar; 
-                return bar; 
-            } 
-        */
-    },
-    /* object constructors */
-    o : [
-        /*
-            {
-                fn : function Foo ( pStr1 ) {
+  data : {
+    code : "",
+    confirm : true,
+    srcFull : "",
+    srcPrefix : "https://output.jsbin.com/",
+    srcSuffix : ".js"
+  },
+  /* functions with no side-effects */
+  fn : {
+      ReduceObjContructorArrayItem ( pAcc, pVal ) {
+          if ( "fn" in pVal && 
+                "prototype" in pVal ) {
+              var fnX = pVal.fn;
+              for ( var y in pVal.prototype ) {
+                  fnX.prototype[y] = pVal.prototype[y];
+              }
+              pAcc[fnX.name] = fnX;                
+          }
+          return pAcc;
+      }
+      /* 
+          foo : function ( pStrBar ) { 
+              var bar = pStrBar; 
+              return bar; 
+          } 
+      */
+  },
+  /* object constructors */
+  o : [
+      /*
+          {
+              fn : function Foo ( pStr1 ) {
 
-                },
-                prototype : {
-                    bar : function () {},
-                    baz : function () {}
-                }
-            }
-        */
-    ],
-    /* main execution, incl. local variables */
-    run : function () {
-        var data = this.data, fn = this.fn, o = this.o.reduce( fn.ReduceObjContructorArrayItem , {} );
-    }
+              },
+              prototype : {
+                  bar : function () {},
+                  baz : function () {}
+              }
+          }
+      */
+  ],
+  /* main execution, incl. local variables */
+  run : function () {
+      var data = this.data, fn = this.fn, o = this.o.reduce( fn.ReduceObjContructorArrayItem , {} );
+  }
 }).run();
