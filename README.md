@@ -5,7 +5,8 @@
 
 ## Get Started
 < quick start instructions >
-[bookmarklet][1]
+
+[bookmarklet](javascript:void prompt("test","foobar"\))
 
 ## Full Documentation
 < link to notion site >
@@ -16,11 +17,11 @@ If you just want to **use** Web Genie, see the resources above.
 
 | file name | description |
 | - | - |
-| webgenie.js | javascript source code of the Web Genie bookmarklet |
-| .replit | *used only for Repl.it IDE:*  configuration file |
-| run.sh | *used only for Repl.it IDE:*  git commit script |
+| `webgenie.js` | javascript source code of the Web Genie bookmarklet |
+| `.replit` | *used only for Repl.it IDE:*  configuration file |
+| `run.sh` | *used only for Repl.it IDE:*  git commit script |
 
 ## Resources
 author : @ceilingrat
+
 source : https://github.com/ceilingrat/webgenie
-[1]: javascript:void prompt("test","foobar")
