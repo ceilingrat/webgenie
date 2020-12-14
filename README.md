@@ -5,8 +5,7 @@
 
 ## Get Started
 < quick start instructions >
-
-[bookmarklet](javascript:void prompt("test","foobar"\))
+  
 
 ## Full Documentation
 < link to notion site >
