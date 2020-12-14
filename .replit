@@ -1,2 +1,2 @@
 language = "bash"
-run = "bash -x run.sh"
+run = "bash run.sh"
