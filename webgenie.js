@@ -21,7 +21,7 @@
             pAcc[fnX.name] = fnX;                
           } 
         return pAcc;
-      }
+      };
       oLoaded = this.a.reduce( fnReduceObjContructorArrayItem, oLoaded );
       return oLoaded;
     },
@@ -34,8 +34,8 @@
             if ( !private.code ) private.code = prompt( "Paste script code" );
             private.srcFull = private.srcPrefix + private.code + private.srcSuffix;
           }
-          this.getSrcFull = function () { return private.srcFull; }
-          this.getConfirm = function () { return private.confirm; }
+          this.getSrcFull = function () { return private.srcFull; };
+          this.getConfirm = function () { return private.confirm; };
         },
         prototype : {
           insertScript : function () {
